@@ -1,5 +1,4 @@
-Demo video of the project
-https://github.com/user-attachments/assets/11b3095f-cbfa-40dd-b9c6-1f5411a6208b
+[Demo video](https://github.com/user-attachments/assets/11b3095f-cbfa-40dd-b9c6-1f5411a6208b)
 
 # 🛒 E-Commerce Demo Application
 
