@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Product{% endblock %}
+{% block content %}
+<div class="container ms-5 p-5 d-flex">
+    <img src="{{url_for('static',filename=data.ipath)}}" 
+         style="width: 500px; height: 500px; object-fit: cover;" 
+         class="img-fluid rounded bg-light mt-3" 
+         alt="...">
+    <div class="card bg-dark" style="margin-left: 6rem;">
+        <div class="card-body p-2 text-white" style="width: 700px; height: 500px; object-fit: cover;">
+            <h1 class="card-title text-uppercase">{{data.pname}}</h1>
+            <h3 class="mt-3 mb-5 fw-medium d-inline-block">₹ {{data.price}}</h3>
+            <h3 class="ms-3 mt-3 mb-5 fw-medium d-inline-block text-decoration-line-through">₹ {{data.price+5000}}</h3>
+            <p class="mb-0 fw-bold">About this item:</p>
+            <p>{{data.desc}}</p>
+            <p class="mt-3 mb-3">Seller: {{data.name}}</p>
+            <div>
+                <a href="/buy/{{data.id}}" class="btn btn-outline-success btn-lg">BUY NOW</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

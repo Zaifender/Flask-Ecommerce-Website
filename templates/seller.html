@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Seller{% endblock %}
+{% block content %}
+<style>
+  .bg-img {
+    background-image: url('static/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<div class="container-fluid vh-100 d-flex align-items-center justify-content-center bg-img">
+  <div class="card shadow" style="width: 450px;">
+    <div class="card-body p-4">
+      <h1 class="card-title text-center mb-4">Register for Sellers</h1>
+
+      <form method="post" action="#">
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          {{ form.username(class="form-control", id="username") }}
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          {{ form.password(class="form-control", id="password") }}
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Confirm Password</label>
+          {{ form.cpassword(class="form-control", id="cpassword") }}
+        </div>
+
+        <div class="d-grid">
+          {{ form.submit(class="btn btn-primary") }}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

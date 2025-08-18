@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+  <div class="row">
+    {% for i in cards %}
+    <div class="col-md-3 mb-3">
+      <div class="card mt-3">
+        <img src="static/{{i.ipath}}" 
+             style="width: 100%; height: 300px; object-fit: cover;" 
+             class="img-fluid card-img-top rounded-top" 
+             alt="...">
+        <div class="card-body">
+          <h5 class="card-title d-inline-block">{{ i.pname }}</h5>
+          <h5 class="d-inline-block float-end">₹{{ i.price }}</h5>
+          <p class="card-text">{{ i.desc }}</p>
+          <p class="card-text">Seller: {{ i.name }}</p>  
+        </div>
+        <a href="/product/{{i.id}}" class="stretched-link"></a>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

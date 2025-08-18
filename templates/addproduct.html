@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}About Product{% endblock %}
+{% block content %}
+<div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+        <div class="card shadow" style="width: 1000px;">
+            <div class="card-body p-4">
+                <h1 class="card-title text-center mb-4">LIST A PRODUCT</h1>
+
+                <form method="post" action="#" enctype="multipart/form-data">
+                    {{form.hidden_tag()}}
+
+                <div class="mb-3">
+                    <label for="pname" class="form-label">Product Name</label>
+                    {{ form.pname(class="form-control", id="pname") }}
+                </div>
+                
+                <div class="mb-3">
+                    <label for="desc" class="form-label">Description</label>
+                    {{ form.desc(class="form-control", id="desc" ,rows="3") }}
+                </div>
+                
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">₹</span>
+                    {{ form.price(class="form-control", id="desc") }}
+                </div>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="image">Upload Product's Image</label>
+                    {{ form.image(class="form-control", id="image") }}
+                </div>
+
+                <div class="d-grid">
+                    {{ form.submit(class="btn btn-primary") }}
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

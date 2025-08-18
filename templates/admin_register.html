@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Admin Register Page{% endblock %}
+{% block content %}
+ <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+        <div class="card shadow" style="width: 500px;">
+            <div class="card-body p-4">
+                <h1 class="card-title text-center mb-4">Admin Register Page</h1>
+                
+                <form method="post" action="#">
+                    {{ form.hidden_tag() }}
+                    
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        {{ form.username(class="form-control", id="username") }}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        {{ form.password(class="form-control", id="password") }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Confirm Password</label>
+                        {{ form.cpassword(class="form-control", id="cpassword") }}
+                    </div>
+                    
+                    <div class="d-grid">
+                        {{ form.submit(class="btn btn-primary") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
