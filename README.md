@@ -1,3 +1,6 @@
+Demo video of the project
+https://github.com/user-attachments/assets/11b3095f-cbfa-40dd-b9c6-1f5411a6208b
+
 # 🛒 E-Commerce Demo Application
 
 This project is a demo of a simple **E-Commerce platform** built with Python and Flask. It allows users to browse, buy, and manage products, supporting distinct roles such as buyers, sellers, and administrators, each with tailored functionalities.
