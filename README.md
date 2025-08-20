@@ -50,12 +50,6 @@ This project is a demo of a simple **E-Commerce platform** built with Python and
 
 ---
 
-## ⚙️ Setup & Running
-
-*(Add instructions here for setting up the environment, installing dependencies, and running the app)*
-
----
-
 ## ✅ Future Enhancements
 - Payment gateway integration
 - Enhanced seller dashboard
